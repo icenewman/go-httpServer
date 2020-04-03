@@ -1,2 +1,5 @@
-#pc
-/.idea
+#win#
+.\.idea\*
+
+#linux#
+./.idea/*
