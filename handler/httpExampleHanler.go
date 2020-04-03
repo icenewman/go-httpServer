@@ -3,15 +3,16 @@ package handler
 import (
 	"../service"
 	"encoding/json"
+	"fmt"
 	"net/http"
-	"net/url"
 )
 
 
 func HttpFuncExample(w http.ResponseWriter, req *http.Request)  {
 	req.ParseForm()
 	request_args := req.Form
-	response := service.httpServiceExample()
+	fmt.Printf(request_args.Encode())
+	response := service.HttpServiceExample()
 	w.Header().Set("Content-Type","application/json")
 	json.NewEncoder(w).Encode(&response)
 }
