@@ -1,5 +1,5 @@
-#win#
-.\.idea\*
+#win
+\.idea\
 
-#linux#
-./.idea/*
+#linux
+/.idea/
