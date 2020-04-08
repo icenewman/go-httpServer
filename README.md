@@ -1,2 +1,2 @@
 # go-httpServer
-a web server
+a quick and small golang http restful service
