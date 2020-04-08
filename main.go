@@ -6,10 +6,13 @@ import (
 	"net/http"
 )
 
-var Port = ":8080"
+//web server port
+var Port = ":80"
 
 func main() {
-	router := router.Router()
 	log.Println("server start with port" + Port)
-	log.Fatal(http.ListenAndServe(Port, router))
+	for _, v := range router.Routes{
+		log.Printf("Route registy name=%s path=%s method=%s func=%p",v.Name, v.Pattern, v.Method, v.HandlerFunc)
+	}
+	log.Fatal(http.ListenAndServe(Port, router.MuxRouter))
 }

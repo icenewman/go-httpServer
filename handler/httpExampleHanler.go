@@ -7,6 +7,10 @@ import (
 	"net/http"
 )
 
+//func init()  {
+//	router.AddRouter(router.RouteDetail{Name: "example",    Method:"GET",	Pattern:"/example",	HandlerFunc:HttpFuncExample})
+//}
+
 
 func HttpFuncExample(w http.ResponseWriter, req *http.Request)  {
 	req.ParseForm()
